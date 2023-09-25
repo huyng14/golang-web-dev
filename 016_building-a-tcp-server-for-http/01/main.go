@@ -58,7 +58,7 @@ func respond(conn net.Conn) {
 
 	body := `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title></title></head><body><strong>Hello World</strong></body></html>`
 
-	fmt.Fprint(conn, "HTTP/1.1 200 OK\r\n")
+	fmt.Fprint(conn, "HTTP/2.0 200 OK\r\n")
 	fmt.Fprintf(conn, "Content-Length: %d\r\n", len(body))
 	fmt.Fprint(conn, "Content-Type: text/html\r\n")
 	fmt.Fprint(conn, "\r\n")

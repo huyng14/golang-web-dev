@@ -14,7 +14,7 @@ func (m hotdog) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 		log.Fatalln(err)
 	}
 
-	tpl.ExecuteTemplate(w, "index.gohtml", req.Form)
+	tpl.ExecuteTemplate(w, "index.gohtml", req.PostForm)
 }
 
 var tpl *template.Template
