@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/julienschmidt/httprouter"
 	"html/template"
 	"log"
 	"net/http"
+
+	"github.com/julienschmidt/httprouter"
 )
 
 var tpl *template.Template
@@ -29,6 +30,7 @@ func main() {
 
 func user(w http.ResponseWriter, req *http.Request, ps httprouter.Params) {
 	fmt.Fprintf(w, "USER, %s!\n", ps.ByName("name"))
+	fmt.Printf("USER, %s!\n", ps.ByName("name"))
 }
 
 func blogRead(w http.ResponseWriter, req *http.Request, ps httprouter.Params) {

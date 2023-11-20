@@ -22,7 +22,7 @@ func dog(w http.ResponseWriter, req *http.Request) {
 }
 
 func dogPic(w http.ResponseWriter, req *http.Request) {
-	f, err := os.Open("toby.jpg")
+	f, err := os.Open("toby2.jpg")
 	if err != nil {
 		http.Error(w, "file not found", 404)
 		return
